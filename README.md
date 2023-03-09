@@ -69,7 +69,7 @@ public HttpEntity<ChatGptRequest> buildHttpEntity(ChatGptRequest chatGptRequest)
 ```
 2.
 ```java
-public ChatGptResponse getResponse(HttpEntity<ChatGptRequest> gptRequestHttpEntity) {
+public ChatGptResponse response(HttpEntity<ChatGptRequest> gptRequestHttpEntity) {
 ResponseEntity<ChatGptResponse> response = restTemplate.postForEntity(ConstantForChatGpt.URL,
 gptRequestHttpEntity, ChatGptResponse.class);
 return response.getBody();
